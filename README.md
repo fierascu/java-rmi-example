@@ -1,29 +1,42 @@
-# Foobar
+# java-rmi-example
 
-Foobar is a Python library for dealing with word pluralization.
+java-rmi-example is an example of RMI.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Extracted from [javatpoint.com/RMI](https://www.javatpoint.com/RMI).
 
+Java RMI Example
+The is given the 6 steps to write the RMI program.
+
+1. Create the remote interface
+2. Provide the implementation of the remote interface
+3. Compile the implementation class and create the stub and skeleton objects using the rmic tool
+4. Start the registry service by rmiregistry tool
+5. Create and start the remote application
+6. Create and start the client application
+
+
+## For running this rmi example
+  
+1. compile all the java files
 ```bash
-pip install foobar
+javac *.java
 ```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+2. create stub and skeleton object by rmic tool 
+```bash
+rmic AdderRemote  
 ```
+3. start rmi registry in one command prompt
+```bash
+rmiregistry 5000
+```
+4. start the server in another command prompt
+```bash
+java MyServer
+```
+5. start the client application in another command prompt
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
