@@ -36,6 +36,9 @@ rmiregistry 5000
 java MyServer
 ```
 5. start the client application in another command prompt
+```bash
+java MyClient
+```
 
 
 ## License
